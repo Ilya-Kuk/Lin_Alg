@@ -96,11 +96,15 @@ print('The eigenvalue that corresponds to this is 1. Steady states are infinite 
 
 # a) Try diagonalizing A
 
-A = sy.Matrix([[0,-6,-4],[5,-11,-6],[-6,-9,4]])
+A = sy.Matrix([[0,-6,-4],[5,-11,-6],[-6,9,4]])
 
 X,D = A.diagonalize()
 
 # b) no. write eigenvals and eigenvects.
+
+lamda = symbols('lamda')
+p = A.charpoly(lamda)
+factor(p)
 
 A_v = A.eigenvects()
 A_e = A.eigenvals()
@@ -109,7 +113,4 @@ print('The eigenvalue', A_v[0][0],' has multiplicity', A_v[0][1],', it\'s eigenv
 
 # c) explain why you can't diagonalize this matrix.
 
-lamda = symbols('lamda')
-p = A.charpoly(lamda)
-factor(p)
-
+print('The eigenvalue -2 has algebraic multiplicity 2, and corresponds to only 1 eigenvector. The Matrix of eigenvectors X is not square, so the matrix A is not diagonalizable.')

@@ -90,7 +90,7 @@ print('The steady-state solution is ',xlim,'.')
 
 # e) what eigenvalue corresponds to this? explain.
 
-print('The eigenvalue that corresponds to this is 1. Steady states are infinite iterations, as they approach an equilibrium. Since they can be expressed as a diagonalized matrix, this equates to infinitely multiplying a diagonal matrix D. In this context, all values within 1 of 0 approach 0, values outside 1 of 0 diverge, -1 oscillates, and 1 approaches 1. The only non-zero value in lim D^k ends up being the 3rd eigenvalue, that takes on the value 1.)
+print('The eigenvalue that corresponds to this is 1. Steady states are infinite iterations, as they approach an equilibrium. Since they can be expressed as a diagonalized matrix, this equates to infinitely multiplying a diagonal matrix D. In this context, all values within 1 of 0 approach 0, values outside 1 of 0 diverge, -1 oscillates, and 1 approaches 1. The only non-zero value in lim D^k ends up being the 3rd eigenvalue, that takes on the value 1.')
 
 #######  5  #########
 

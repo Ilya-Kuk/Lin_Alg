@@ -27,10 +27,10 @@ x2 = np.linspace(-5,5,1000)
 
 x1,x2 = np.meshgrid(x1,x2) #creating grid
 
-a = float(Q[0,0]/D[0,0]) #eigenvector components
-b = float(Q[1,0]/D[0,0])
-c = float(Q[0,1]/D[1,1])
-d = float(Q[1,1]/D[1,1])
+a = float(Q[0,0]/np.sqrt(float(Q[0,0]))) #eigenvector components, normalized by square root of eigenvalue
+b = float(Q[1,0]/np.sqrt(float(D[0,0])))
+c = float(Q[0,1]/np.sqrt(float(D[1,1])))
+d = float(Q[1,1]/np.sqrt(float(D[1,1])))
 
 fig = plt.figure(1)  #creating figure
 ax = fig.add_subplot(111)
@@ -115,10 +115,10 @@ x2 = np.linspace(-5,5,1000)
 x1,x2 = np.meshgrid(x1,x2)
 
 #eigenvector components
-a = float(Q[0,0])
-b = float(Q[1,0])
-c = float(Q[0,1])
-d = float(Q[1,1])
+a = float(Q[0,0]) # sqrt(-1) is not valid here, but ||sqrt(-1)||==1
+b = float(Q[1,0]) ## these components are for the reflecting axis anyway, scaling is sort of meaningless
+c = float(Q[0,1]/2) # sqrt(4)==2
+d = float(Q[1,1]/2)
 
 #creating figure
 fig = plt.figure(3)
